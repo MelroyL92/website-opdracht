@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,400&display=swap');
+
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -12,25 +14,149 @@
     5. Media Queries
 ////////////////////////*/
 
-
-
 /* ------------------------------- 1. Global Styles -------------------------------- */
-
 
 * {
     margin: 0;
     box-sizing: border-box;
 }
 
+img {
+    overflow-clip-margin: border-box;
+    margin: 0;
+}
+
+:root {
+    --main-text-color:#0C0C0C;
+    --main-floating-words:#F2F0FF;
+    --main-background-projects:#F3F6F9;
+    --main-service-rule-text:#7A7A7A;
+    --purple: #5722cd;
+    --blue:#4845E4;
+    --pink:#ED4385;
+}
+
 /* ------------------------------- 2. Typography ----------------------------------- */
 
+.dev {
+    border: 2px solid black;
+}
+
 body {
-    font-family:
+    font-family: 'Merriweather' , 'Roboto', sans-serif;
+
+}
+
+ h2 {
+    color: var(--purple);
+    margin: 0 0 10px 0;
+     font-family: Merriweather, sans-serif;
+}
+.section-wrapper h2 {
+    color: var(--main-text-color);
+}
+
+footer h2{
+    color: var(--main-floating-words);
+}
+
+footer p {
+    color: var(--main-floating-words)
+}
+
+footer form {
+    color: var(--main-floating-words)
+}
+
+a {
+    color: var(--purple);
+    font-family: Roboto, sans-serif;
+}
+
+p {
+    margin: 20px 0 20px 0;
+    font-family: Roboto, sans-serif;
 }
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
+header {
+    background-color: var( --purple);
+    color: var(--main-floating-words);
+    height: 40vh;
+    background-image: url("assets/squiggle_line_stripe.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 144%;
+}
+
+ul {
+    list-style: none;
+}
+
+header a {
+    color: var(--main-floating-words);
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a.transition-a::after {
+    display: block;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--purple);
+    transition: width 0.50s ease-in-out;
+}
+
+a.transition-a:hover::after {
+    width:50%;
+}
+
+
+button {
+    border-radius: 20px;
+    background-color: var(--pink);
+    color: var(--main-floating-words);
+    padding: 10px 40px;
+    border: none;
+    margin: 20px 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.40);
+}
+
+footer {
+    background-color: var(--purple);
+    height: 50vh;
+}
+
+.copyright{
+    background-color: var(--main-text-color) ;
+    color: var(--main-floating-words) ;
+}
+
 /* --------------- 3.1 Reusables ----------------------- */
+
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inner-container {
+    flex-basis: 1200px; /*flex basis gaat op basis van de parent container en die is row*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px; /* misschien veranderen voor margin */
+
+
+}
+
+article h3 {
+    color: var(--purple);
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
@@ -38,6 +164,130 @@ body {
 
 /* --------------- 4.1 Header ------------------------- */
 
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-basis: 600px;
+}
+
+.header-section {
+    height: calc(40vh - 60px);
+    flex-basis: 600px;
+}
+
+.header-section span {
+    flex-basis: 100px;
+}
+
+.header-section img {
+    width: 100%;
+
+}
+
 /* --------------- 4.2 Introduction ------------------- */
+.inner-container__introduction {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 700px;
+    align-items: center;
+    justify-content: space-evenly;
+    height: calc(100vh - 50vh);
+
+
+}
+
+.section-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-basis: 1200px;
+    height: 50vh;
+}
+
+.variety-wrapper {
+    flex-direction: row-reverse;
+    position: relative;
+}
+
+.section-wrapper span {
+    flex-basis: 500px;
+    margin: 10px;
+}
+
+.section-wrapper img {
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.40);
+
+}
+
+.section-text{
+    align-items: center;
+    flex-basis: 300px;
+}
+
+.section-text img {
+    width: 6vw;
+}
+
+.child-class-article {
+ align-content: flex-start;
+ flex-basis: 350px;
+ border: 1px solid var(--purple);
+ margin: 0 10px;
+ padding: 20px;
+ box-shadow: 0 8px 24px rgba(0, 0, 0, 0.40);
+}
+
+.squiggle-line {
+    justify-content: flex-start;
+}
+
+.child-class-article img {
+    max-width: 100px;
+    margin: 16px 0;
+}
+
+.inner-container__grid {
+    flex-basis: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    margin: 40px 20px;
+}
+
+/* --------------- 4.2 Footer ------------------- */
+
+input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+
+}
+
+.form-class{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    width: 40%
+}
+
+input {
+    width: 100%;
+}
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
