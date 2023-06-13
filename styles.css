@@ -32,7 +32,7 @@ img {
     --main-background-projects:#F3F6F9;
     --main-service-rule-text:#7A7A7A;
     --purple: #5722cd;
-    --blue:#4845E4;
+    --main-purple: radial-gradient(circle, rgba(87,34,205,1) 39%, rgba(75,73,232,1) 93%);
     --pink:#ED4385;
 }
 
@@ -68,9 +68,21 @@ footer form {
     color: var(--main-floating-words)
 }
 
+.inner-container__introduction a {
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
+nav a {
+    font-weight: 400;
+    letter-spacing: normal;
+}
+
 a {
     color: var(--purple);
     font-family: Roboto, sans-serif;
+    font-weight: 600;
+    letter-spacing: .2rem;
 }
 
 p {
@@ -81,12 +93,12 @@ p {
 /* ------------------------------- 3. Layout --------------------------------------- */
 
 header {
-    background-color: var( --purple);
+    background-color: var(--purple);
     color: var(--main-floating-words);
-    height: 40vh;
+    height: 60vh;
     background-image: url("assets/squiggle_line_stripe.svg");
     background-repeat: no-repeat;
-    background-position: 50% 144%;
+    background-position: 50% 110%;
 }
 
 ul {
@@ -127,8 +139,8 @@ button {
 }
 
 footer {
-    background-color: var(--purple);
-    height: 50vh;
+    background: radial-gradient(circle, rgba(87,34,205,1) 39%, rgba(75,73,232,1) 93%);
+    height: 55vh;
 }
 
 .copyright{
@@ -145,11 +157,11 @@ footer {
 }
 
 .inner-container {
-    flex-basis: 1200px; /*flex basis gaat op basis van de parent container en die is row*/
+    flex-basis: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 15px; /* misschien veranderen voor margin */
+    margin: 15px;
 
 
 }
@@ -181,6 +193,7 @@ nav ul {
 .header-section {
     height: calc(40vh - 60px);
     flex-basis: 600px;
+    text-align: center;
 }
 
 .header-section span {
@@ -241,13 +254,14 @@ nav ul {
  align-content: flex-start;
  flex-basis: 350px;
  border: 1px solid var(--purple);
- margin: 0 10px;
- padding: 20px;
+ padding: 10px;
  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.40);
 }
 
-.squiggle-line {
-    justify-content: flex-start;
+#squiggle-line,
+#squiggle-line2,
+#squiggle-line1{
+    width: 57px;
 }
 
 .child-class-article img {
@@ -259,10 +273,10 @@ nav ul {
     flex-basis: 1200px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    row-gap: 15px;
-    margin: 40px 20px;
+    row-gap: 40px;
+    margin: 40px 10px 40px 5px;
 }
 
 /* --------------- 4.2 Footer ------------------- */
@@ -271,6 +285,7 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 .copyright{
@@ -283,7 +298,7 @@ input {
     display: flex;
     flex-direction: column ;
     align-items: center;
-    width: 40%
+    width: 40%;
 }
 
 input {
@@ -291,3 +306,66 @@ input {
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
+/*@media screen and (max-width: 576px) {*/
+
+/*
+
+    header {
+    }
+
+
+    .outer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .inner-container__introduction {
+        flex-basis: 500px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .section-wrapper{
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 0 0 10px 0;
+        align-items: center;
+        flex-basis: 400px;
+        height: 35vh;
+
+    }
+
+    .variety-wrapper {
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 0 0 10px 0;
+        align-items: flex-start;
+    }
+
+
+    .inner-container__grid {
+        flex-direction: column;
+        row-gap: 50px;
+        align-items: center;
+    }
+
+    .
+
+    footer {
+        height: 50vh;
+        flex-shrink: 2;
+    }
+
+     textarea {
+         width: 90%
+     }
+
+    input {
+        width: 100%;
+    }
+}
+
+*/
+
